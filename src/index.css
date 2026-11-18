@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+/*
+ * Identidade visual (Spec 02, D13): site neutro, de cores claras.
+ * Fundos off-white/areia, texto em verde-acinzentado escuro e uma única
+ * cor de destaque sóbria. Aparência única (sem tema escuro).
+ */
+@theme {
+  --color-paper: #fbfaf7;
+  --color-sand: #f2efe9;
+  --color-stone: #e9e5dc;
+  --color-line: #ded9ce;
+  --color-ink: #26302d;
+  --color-muted: #55605c;
+  --color-accent: #2f6b57;
+  --color-accent-dark: #245443;
+  --color-accent-soft: #e5eee9;
+
+  --font-sans:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-serif:
+    'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    color: var(--color-ink);
+    line-height: 1.2;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  [tabindex='-1']:focus {
+    outline: none;
+  }
+}
