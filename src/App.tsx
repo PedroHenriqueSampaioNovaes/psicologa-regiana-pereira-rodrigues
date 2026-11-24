@@ -10,14 +10,6 @@ import { Institucional } from './components/Institucional';
 import { Profissional } from './components/Profissional';
 import { Servicos } from './components/Servicos';
 import { StickyWhatsApp } from './components/StickyWhatsApp';
-import { enableAnalytics } from './lib/analytics';
-
-/** Liga a medição de acessos ao abrir a página (Spec 15). */
-function useAnalytics() {
-  useEffect(() => {
-    enableAnalytics();
-  }, []);
-}
 
 /** Ao seguir um link de âncora, move o foco para o título da seção (Spec 02). */
 function useAnchorFocus() {
@@ -41,7 +33,6 @@ function useAnchorFocus() {
 }
 
 export default function App() {
-  useAnalytics();
   useAnchorFocus();
 
   return (

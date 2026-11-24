@@ -23,7 +23,7 @@ export function StickyWhatsApp() {
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex justify-end p-3 md:p-5">
       <div className="pointer-events-auto">
-        <WhatsAppButton segment="paciente" position="botao-fixo" className="shadow-lg shadow-black/15">
+        <WhatsAppButton segment="paciente" className="shadow-lg shadow-black/15">
           WhatsApp
         </WhatsAppButton>
       </div>

@@ -24,7 +24,7 @@ export function Institucional() {
             <li>Inclusão escolar e neurodiversidade</li>
           </ul>
           <div className="mt-auto pt-7">
-            <WhatsAppButton segment="escola" position="institucional-escola" variant="outline">
+            <WhatsAppButton segment="escola" variant="outline">
               Falar sobre consultoria escolar
             </WhatsAppButton>
           </div>
@@ -42,7 +42,7 @@ export function Institucional() {
             <li>Capacitações sobre neurodiversidade</li>
           </ul>
           <div className="mt-auto pt-7">
-            <WhatsAppButton segment="empresa" position="institucional-empresa" variant="outline">
+            <WhatsAppButton segment="empresa" variant="outline">
               Falar sobre palestras e capacitações
             </WhatsAppButton>
           </div>

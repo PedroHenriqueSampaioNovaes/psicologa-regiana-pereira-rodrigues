@@ -23,7 +23,7 @@ export function Hero() {
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <WhatsAppButton segment="paciente" position="hero">
+            <WhatsAppButton segment="paciente">
               Conversar pelo WhatsApp
             </WhatsAppButton>
             <a

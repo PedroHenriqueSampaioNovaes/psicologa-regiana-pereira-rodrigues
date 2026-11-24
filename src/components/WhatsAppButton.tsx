@@ -1,13 +1,10 @@
 import type { ReactNode } from 'react';
 import type { Segment } from '../content/site';
-import { track } from '../lib/analytics';
 import { whatsappUrl } from '../lib/whatsapp';
 import { WhatsAppIcon } from './Icons';
 
 interface WhatsAppButtonProps {
   segment: Segment;
-  /** Onde o botão está na página (usado só na medição agregada). */
-  position: string;
   children?: ReactNode;
   variant?: 'solid' | 'outline';
   className?: string;
@@ -19,7 +16,6 @@ interface WhatsAppButtonProps {
  */
 export function WhatsAppButton({
   segment,
-  position,
   children = 'Conversar pelo WhatsApp',
   variant = 'solid',
   className = '',
@@ -37,7 +33,6 @@ export function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       className={`${base} ${styles} ${className}`}
-      onClick={() => track('whatsapp_click', { segmento: segment, posicao: position })}
     >
       <WhatsAppIcon className="size-5 shrink-0" />
       <span>{children}</span>

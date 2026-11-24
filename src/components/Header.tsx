@@ -37,7 +37,6 @@ export function Header() {
           <div className="hidden md:block">
             <WhatsAppButton
               segment="paciente"
-              position="cabecalho"
               variant="solid"
               className="min-h-11! px-5! py-2! text-[0.95rem]"
             >

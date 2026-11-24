@@ -1,5 +1,4 @@
 import { site } from '../content/site';
-import { track } from '../lib/analytics';
 import { ClockIcon, InstagramIcon, PinIcon } from './Icons';
 import { MapEmbed } from './MapEmbed';
 import { Section, SectionHeading } from './Section';
@@ -17,7 +16,7 @@ export function Contato() {
 
       <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
         <div>
-          <WhatsAppButton segment="paciente" position="contato">
+          <WhatsAppButton segment="paciente">
             Conversar pelo WhatsApp
           </WhatsAppButton>
 
@@ -34,7 +33,6 @@ export function Contato() {
                   href={site.directionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => track('como_chegar_click')}
                   className="mt-3 inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-4"
                 >
                   Como chegar
@@ -56,7 +54,6 @@ export function Contato() {
                   href={site.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => track('instagram_click')}
                   className="inline-flex min-h-11 items-center text-accent underline underline-offset-4"
                 >
                   {site.instagramHandle}

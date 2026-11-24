@@ -59,7 +59,7 @@ export function ComoFunciona() {
       </p>
 
       <div className="mt-8">
-        <WhatsAppButton segment="paciente" position="como-funciona">
+        <WhatsAppButton segment="paciente">
           Agendar uma conversa
         </WhatsAppButton>
       </div>

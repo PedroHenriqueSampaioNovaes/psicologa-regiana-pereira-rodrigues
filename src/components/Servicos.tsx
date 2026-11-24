@@ -35,7 +35,7 @@ export function Servicos() {
             De 12 a 17 anos, o atendimento acontece com o consentimento dos responsáveis.
           </p>
           <div className="mt-auto pt-7">
-            <WhatsAppButton segment="paciente" position="servicos-psicoterapia">
+            <WhatsAppButton segment="paciente">
               Agendar uma conversa
             </WhatsAppButton>
           </div>
@@ -57,7 +57,7 @@ export function Servicos() {
             outros profissionais, quando necessária.
           </p>
           <div className="mt-auto pt-7">
-            <WhatsAppButton segment="familia" position="servicos-orientacao-parental" variant="outline">
+            <WhatsAppButton segment="familia" variant="outline">
               Conversar sobre orientação
             </WhatsAppButton>
           </div>
