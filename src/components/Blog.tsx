@@ -29,7 +29,7 @@ export default function Blog() {
                 <img
                   src={`${post.metadata.imagem_destacada.imgix_url}?w=768&auto=format,compression`}
                   alt={post.title}
-                  className='h-60 w-full object-cover'
+                  className="h-60 w-full object-cover"
                 />
                 <RichText value={post.metadata.conteudo} blocks={blocks} />
               </article>
