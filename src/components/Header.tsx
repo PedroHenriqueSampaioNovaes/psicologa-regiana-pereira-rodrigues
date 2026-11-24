@@ -13,10 +13,15 @@ export function Header() {
           <span className="block truncate font-serif text-lg font-semibold text-ink">
             {site.shortName}
           </span>
-          <span className="block truncate text-sm text-muted">Psicóloga · {site.crp}</span>
+          <span className="block truncate text-sm text-muted">
+            Psicóloga · {site.crp}
+          </span>
         </a>
 
-        <nav aria-label="Seções da página" className="hidden items-center gap-6 xl:flex">
+        <nav
+          aria-label="Seções da página"
+          className="hidden items-center gap-6 xl:flex"
+        >
           {site.nav.map((item) => (
             <a
               key={item.href}
@@ -30,7 +35,12 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <div className="hidden md:block">
-            <WhatsAppButton segment="paciente" position="cabecalho" variant="solid" className="!min-h-11 !px-5 !py-2 text-[0.95rem]">
+            <WhatsAppButton
+              segment="paciente"
+              position="cabecalho"
+              variant="solid"
+              className="min-h-11! px-5! py-2! text-[0.95rem]"
+            >
               WhatsApp
             </WhatsAppButton>
           </div>
@@ -41,8 +51,14 @@ export function Header() {
             aria-controls="menu-mobile"
             onClick={() => setOpen((value) => !value)}
           >
-            {open ? <CloseIcon className="size-6" /> : <MenuIcon className="size-6" />}
-            <span className="sr-only">{open ? 'Fechar menu' : 'Abrir menu'}</span>
+            {open ? (
+              <CloseIcon className="size-6" />
+            ) : (
+              <MenuIcon className="size-6" />
+            )}
+            <span className="sr-only">
+              {open ? 'Fechar menu' : 'Abrir menu'}
+            </span>
           </button>
         </div>
       </div>

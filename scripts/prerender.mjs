@@ -14,6 +14,8 @@ const { render, headTags } = await import(pathToFileURL(ssrEntry).href);
 const templatePath = resolve(distDir, 'index.html');
 let html = await readFile(templatePath, 'utf8');
 
+const appHtml = await render();
+
 for (const marker of ['<!--app-html-->', '<!--seo-head-->']) {
   if (!html.includes(marker)) {
     throw new Error(`Marcador ${marker} não encontrado em dist/index.html`);
@@ -25,7 +27,7 @@ html = html
   .replace(/<title>[\s\S]*?<\/title>/, '')
   // Usa funções para que "$" no conteúdo não seja interpretado como padrão de substituição.
   .replace('<!--seo-head-->', () => headTags())
-  .replace('<!--app-html-->', () => render());
+  .replace('<!--app-html-->', () => appHtml);
 
 await writeFile(templatePath, html);
 

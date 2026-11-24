@@ -1,6 +1,13 @@
 {
   "version": 2,
   "skills": {
+    "cosmic": {
+      "source": "cosmicjs/skills",
+      "commit": "d3dd5e853cb740da8886426b1a8d72c72cefb28b",
+      "sourceType": "github",
+      "skillPath": "cosmic/SKILL.md",
+      "computedHash": "847db6d8945a981111c2fd2d63b1fb000f724c26b0418bea063802e218988d93"
+    },
     "frontend-design": {
       "source": "anthropics/skills",
       "commit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",

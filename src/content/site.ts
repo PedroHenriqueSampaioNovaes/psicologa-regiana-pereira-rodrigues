@@ -91,6 +91,7 @@ export const site = {
     { href: '#como-funciona', label: 'Como funciona' },
     { href: '#faq', label: 'Dúvidas' },
     { href: '#contato', label: 'Contato' },
+    { href: '/blog', label: 'Blog' },
   ],
 };
 

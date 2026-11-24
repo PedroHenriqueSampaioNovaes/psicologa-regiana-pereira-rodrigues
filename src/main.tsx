@@ -1,18 +1,25 @@
 import { StrictMode } from 'react';
-import { createRoot, hydrateRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
+import { RouterProvider, createRouter } from '@tanstack/react-router';
 import './index.css';
-import App from './App.tsx';
 
-const container = document.getElementById('root')!;
-const app = (
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+import { routeTree } from './routeTree.gen';
 
-// Em produção o HTML já vem pré-renderizado: hidratamos. No `vite dev`, montamos do zero.
-if (container.firstElementChild) {
-  hydrateRoot(container, app);
-} else {
-  createRoot(container).render(app);
+const router = createRouter({
+  routeTree,
+  scrollRestoration: true,
+});
+
+declare module '@tanstack/react-router' {
+  interface Register {
+    router: typeof router;
+  }
 }
+
+const rootElement = document.getElementById('root')!;
+
+ReactDOM.createRoot(rootElement).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>,
+);
